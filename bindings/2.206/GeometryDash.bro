@@ -3904,7 +3904,7 @@ class EditorUI : cocos2d::CCLayer, FLAlertLayerProtocol, ColorSelectDelegate, GJ
 	void createLoop();
 	void createMoveMenu() = win 0x116ee0, m1 0x40df0, imac 0x468a0;
 	TodoReturn createNewKeyframeAnim();
-	TodoReturn createObject(int, cocos2d::CCPoint) = win 0x10c3e0;
+	GameObject* createObject(int, cocos2d::CCPoint) = win 0x10c3e0;
 	TodoReturn createOutlines(cocos2d::CCArray*);
 	TodoReturn createPrefab(GJSmartTemplate*, gd::string, int);
 	TodoReturn createRockBases(cocos2d::CCArray*) = win 0x12B590, imac 0x620050;
