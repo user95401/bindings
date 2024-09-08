@@ -13825,7 +13825,7 @@ class ParentalOptionsLayer : FLAlertLayer {
 class ParticleGameObject : EnhancedGameObject {
 	// virtual ~ParticleGameObject();
 
-	static ParticleGameObject* create();
+	static ParticleGameObject* create() = win 0x473a20;
 
 	TodoReturn applyParticleSettings(cocos2d::CCParticleSystemQuad*);
 	TodoReturn createAndAddCustomParticle();
