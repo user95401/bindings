@@ -5025,7 +5025,7 @@ class FMODAudioEngine : cocos2d::CCNode {
 	float getEffectsVolume() = ios 0x14343c, imac 0x3eba70, m1 0x36929c {
 		return m_sfxVolume;
 	}
-	TodoReturn getFMODStatus(int) = win 0x5ba00, ios 0x1450f8;
+	gd::string getFMODStatus(int) = win 0x5ba00, m1 0x36c1ac, imac 0x3ef5e0, ios 0x1450f8;
 	float getMeteringValue() = imac 0x3e7ec0, m1 0x366518;
 	TodoReturn getMusicChannelID(int);
 	unsigned int getMusicLengthMS(int channel) = win 0x5b0e0;
@@ -5168,7 +5168,7 @@ class FMODAudioEngine : cocos2d::CCNode {
 	int m_sampleRate;
 	bool m_reducedQuality;
 	bool m_unkBool1a1;
-	int m_unkInt1a4;
+	int m_musicOffset;
 	bool m_unkBool1a8;
 	int m_unkInt1ac;
 	FMODAudioState m_audioState;
@@ -5699,7 +5699,7 @@ class GameLevelManager : cocos2d::CCNode {
 	void saveFetchedLevels(cocos2d::CCArray*) = win 0x141e70, imac 0x538600, m1 0x48b144;
 	void saveFetchedMapPacks(cocos2d::CCArray*);
 	void saveGauntlet(GJMapPack*);
-	void saveLevel(GJGameLevel*) = win 0x1438e0;
+	void saveLevel(GJGameLevel*) = win 0x1438e0, imac 0x53E5F0, m1 0x490844;
 	void saveLevelList(GJLevelList*) = win 0x14b7a0, m1 0x48bd08, imac 0x539270;
 	void saveLocalScore(int, int, int);
 	void saveMapPack(GJMapPack*);
@@ -9355,7 +9355,27 @@ class GJGameState {
 [[link(android)]]
 class GJGarageLayer : cocos2d::CCLayer, TextInputDelegate, FLAlertLayerProtocol, GameRateDelegate, ListButtonBarDelegate, DialogDelegate, CharacterColorDelegate, RewardedVideoDelegate {
 	// virtual ~GJGarageLayer();
-	GJGarageLayer() = ios 0x31a060 {}
+	GJGarageLayer() = ios 0x31a060, win inline, android64 inline {
+		m_usernameInput = nullptr;
+		m_playerObject = nullptr;
+		m_tabButtons = nullptr;
+		m_pageButtons = nullptr;
+		m_unknown = nullptr;
+		m_supporter = nullptr;
+		bool m_hasClosed = false;
+		m_iconType = IconType::Cube;
+		m_iconPages = {};
+		m_cursor1 = nullptr;
+		m_cursor2 = nullptr;
+		m_currentIcon = nullptr;
+		m_iconSelection = nullptr;
+		m_leftArrow = nullptr;
+		m_rightArrow = nullptr;
+		m_navDotMenu = nullptr;
+		m_iconID = 0;
+		m_selectedIconType = IconType::Cube;
+		m_videoPlaying = false;
+	}
 
 	gd::string achievementForUnlock(int, UnlockType);
 	gd::string descriptionForUnlock(int, UnlockType) = win 0x266240;
@@ -13246,7 +13266,7 @@ class MoreOptionsLayer : FLAlertLayer, TextInputDelegate, GooglePlayDelegate, GJ
 
 	void addToggle(char const*, char const*, char const*) = win 0x353280, ios 0xf00d0, imac 0x7a8ca0, m1 0x6b004c;
 	int countForPage(int) = win 0x3538e0;
-	void goToPage(int) = win 0x353d00, ios 0xf07e4;
+	void goToPage(int) = win 0x353d00, ios 0xf07e4, m1 0x6b0bc8, imac 0x7a9860;
 	void incrementCountForPage(int);
 	const char* infoKey(int);
 	cocos2d::CCLayer* layerForPage(int) = win 0x353b40;
@@ -13261,9 +13281,9 @@ class MoreOptionsLayer : FLAlertLayer, TextInputDelegate, GooglePlayDelegate, GJ
 	void onGPSignOut(cocos2d::CCObject* sender);
 	void onInfo(cocos2d::CCObject* sender) = win 0x354dc0;
 	void onKeybindings(cocos2d::CCObject* sender) = win 0xd9640, m1 0x6b1048, imac 0x7a9d10;
-	void onNextPage(cocos2d::CCObject* sender) = win 0x353ce0, ios 0xf07d8;
+	void onNextPage(cocos2d::CCObject* sender) = win 0x353ce0, ios 0xf07d8, m1 0x6b0bbc, imac 0x7a9840;
 	void onParental(cocos2d::CCObject* sender) = win 0x354cb0, ios 0xf0704;
-	void onPrevPage(cocos2d::CCObject* sender) = win 0x353cf0, ios 0xf07cc;
+	void onPrevPage(cocos2d::CCObject* sender) = win 0x353cf0, ios 0xf07cc, m1 0x6b0bb0, imac 0x7a9820;
 	void onSongBrowser(cocos2d::CCObject* sender) = win 0x354aa0, ios 0xf0568, imac 0x7a9420, m1 0x6b0790;
 	void onToggle(cocos2d::CCObject* sender) = win 0x3542a0;
 	const char* pageKey(int);
