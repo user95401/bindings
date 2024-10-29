@@ -2733,6 +2733,7 @@ class CreateMenuItem : CCMenuItemSpriteExtra {
 [[link(android)]]
 class CreateParticlePopup : FLAlertLayer, TextInputDelegate, ColorSelectDelegate, SliderDelegate {
 	// virtual ~CreateParticlePopup();
+
 	CreateParticlePopup() {
 		m_secretDoorSprite = nullptr;
 		m_targetObject = nullptr;
@@ -2750,7 +2751,8 @@ class CreateParticlePopup : FLAlertLayer, TextInputDelegate, ColorSelectDelegate
 		}
 		delete ret;
 		return nullptr;
-	};
+	}
+
 	static CreateParticlePopup* create(ParticleGameObject* pObj, cocos2d::CCArray* pObjects, gd::string particleString) {
 		auto ret = new CreateParticlePopup();
 		if (ret->init(pObj, pObjects, particleString)) {
@@ -2759,7 +2761,8 @@ class CreateParticlePopup : FLAlertLayer, TextInputDelegate, ColorSelectDelegate
 		}
 		delete ret;
 		return nullptr;
-	};
+	}
+
 	static CreateParticlePopup* create(ParticleGameObject* pObj, cocos2d::CCArray* pObjects) {
 		auto ret = new CreateParticlePopup();
 		if (ret->init(pObj, pObjects, nullptr)) {
@@ -2768,7 +2771,7 @@ class CreateParticlePopup : FLAlertLayer, TextInputDelegate, ColorSelectDelegate
 		}
 		delete ret;
 		return nullptr;
-	};
+	}
 
 	TodoReturn centerAlignParticle(cocos2d::CCObject*);
 	TodoReturn createParticleSlider(gjParticleValue, int, bool, cocos2d::CCPoint, cocos2d::CCArray*);
