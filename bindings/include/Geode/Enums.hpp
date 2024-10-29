@@ -245,7 +245,7 @@ enum class DifficultyIconType {
     NoText = 2
 };
 enum class GauntletType {
-    Fire = 0,
+    Fire = 1,
     Ice = 2,
     Poison = 3,
     Shadow = 4,
@@ -294,7 +294,9 @@ enum class GauntletType {
     Galaxy = 0x2F,
     Universe = 0x30,
     Discord = 0x31,
-    Split = 0x32
+    Split = 0x32,
+    NCS = 0x33,
+    NCS2 = 0x34
 };
 enum class GJMPErrorCode {};
 enum class GJTimedLevelType {
@@ -395,7 +397,11 @@ enum class GJFeatureState {
 };
 enum class GJKeyGroup {};
 enum class GJKeyCommand {};
-enum class SelectSettingType {};
+enum class SelectSettingType {
+    StartingModeClassic = 0,
+    StartingModePlatformer = 1,
+    StartingSpeed = 2,
+};
 enum class gjParticleValue {
     MaxParticles = 1,
     Duration = 2,
