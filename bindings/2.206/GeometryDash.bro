@@ -2735,7 +2735,6 @@ class CreateParticlePopup : FLAlertLayer, TextInputDelegate, ColorSelectDelegate
 	// virtual ~CreateParticlePopup();
 
 	CreateParticlePopup() {
-		m_secretDoorSprite = nullptr;
 		m_targetObject = nullptr;
 		m_targetObjects = nullptr;
 		m_particles = nullptr;
