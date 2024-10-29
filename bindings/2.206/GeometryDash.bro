@@ -2734,43 +2734,9 @@ class CreateMenuItem : CCMenuItemSpriteExtra {
 class CreateParticlePopup : FLAlertLayer, TextInputDelegate, ColorSelectDelegate, SliderDelegate {
 	// virtual ~CreateParticlePopup();
 
-	CreateParticlePopup() {
-		m_targetObject = nullptr;
-		m_targetObjects = nullptr;
-		m_particles = nullptr;
-		m_unkBool = false;
-		m_particle = nullptr;
-	}
-
-	static CreateParticlePopup* create(gd::string particleString) {
-		auto ret = new CreateParticlePopup();
-		if (ret->init(nullptr, nullptr, particleString)) {
-			ret->autorelease();
-			return ret;
-		}
-		delete ret;
-		return nullptr;
-	}
-
-	static CreateParticlePopup* create(ParticleGameObject* pObj, cocos2d::CCArray* pObjects, gd::string particleString) {
-		auto ret = new CreateParticlePopup();
-		if (ret->init(pObj, pObjects, particleString)) {
-			ret->autorelease();
-			return ret;
-		}
-		delete ret;
-		return nullptr;
-	}
-
-	static CreateParticlePopup* create(ParticleGameObject* pObj, cocos2d::CCArray* pObjects) {
-		auto ret = new CreateParticlePopup();
-		if (ret->init(pObj, pObjects, nullptr)) {
-			ret->autorelease();
-			return ret;
-		}
-		delete ret;
-		return nullptr;
-	}
+	static CreateParticlePopup* create(gd::string);
+	static CreateParticlePopup* create(ParticleGameObject*, cocos2d::CCArray*, gd::string);
+	static CreateParticlePopup* create(ParticleGameObject*, cocos2d::CCArray*) = win 0x400d80, m1 0x3dfefc, imac 0x4787c0;
 
 	TodoReturn centerAlignParticle(cocos2d::CCObject*);
 	TodoReturn createParticleSlider(gjParticleValue, int, bool, cocos2d::CCPoint, cocos2d::CCArray*);
