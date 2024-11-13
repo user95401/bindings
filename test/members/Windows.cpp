@@ -30,15 +30,15 @@ GEODE_MEMBER_CHECK(GJBaseGameLayer, m_stickyGroups, 0x35d0);
 GEODE_MEMBER_CHECK(GJBaseGameLayer, m_audioVisualizerBG, 0x3610);
 GEODE_MEMBER_CHECK(GJBaseGameLayer, m_loadingLayer, 0x3688);
 
-GEODE_SIZE_CHECK(PlayLayer, 0x3998);
+GEODE_SIZE_CHECK(PlayLayer, 0x39a0);
 GEODE_MEMBER_CHECK(PlayLayer, m_checkpointArray, 0x37a0);
 GEODE_MEMBER_CHECK(PlayLayer, m_circleWaveArray, 0x37d0);
 GEODE_MEMBER_CHECK(PlayLayer, m_attemptLabel, 0x37f0);
 GEODE_MEMBER_CHECK(PlayLayer, m_progressBar, 0x3808);
 GEODE_MEMBER_CHECK(PlayLayer, m_hasCompletedLevel, 0x3895);
-GEODE_MEMBER_CHECK(PlayLayer, m_isPaused, 0x38ff);
-GEODE_MEMBER_CHECK(PlayLayer, m_tryPlaceCheckpoint, 0x3974);
-GEODE_MEMBER_CHECK(PlayLayer, m_activatedCheckpoint, 0x3978);
+GEODE_MEMBER_CHECK(PlayLayer, m_isPaused, 0x3907);
+GEODE_MEMBER_CHECK(PlayLayer, m_tryPlaceCheckpoint, 0x397c);
+GEODE_MEMBER_CHECK(PlayLayer, m_activatedCheckpoint, 0x3980);
 
 GEODE_SIZE_CHECK(LevelEditorLayer, 0x39e8);
 GEODE_MEMBER_CHECK(LevelEditorLayer, m_coinCount, 0x3754);
@@ -317,6 +317,13 @@ GEODE_SIZE_CHECK(NumberInputLayer, 0x2b8);
 GEODE_SIZE_CHECK(ShareLevelLayer, 0x298);
 GEODE_SIZE_CHECK(ShareLevelSettingsLayer, 0x2a0);
 GEODE_SIZE_CHECK(ShareListLayer, 0x290);
+GEODE_SIZE_CHECK(MusicSearchResult, 0x90);
+GEODE_SIZE_CHECK(SelectSFXSortLayer, 0x288);
+GEODE_SIZE_CHECK(SFXBrowser, 0x330);
+GEODE_SIZE_CHECK(SFXFolderObject, 0x78);
+GEODE_SIZE_CHECK(SFXInfoObject, 0x70);
+GEODE_SIZE_CHECK(SFXSearchResult, 0xa0);
+GEODE_SIZE_CHECK(SecretLayer5, 0x290);
 
 GEODE_MEMBER_CHECK(EditorUI, m_transformState, 0x210);
 
@@ -397,6 +404,7 @@ GEODE_SIZE_CHECK(SetupTriggerPopup, 0x3a8);
 GEODE_SIZE_CHECK(GJOptionsLayer, 0x3f0);
 
 GEODE_MEMBER_CHECK(CountTriggerGameObject, m_pickupTriggerMode, 0x744);
+GEODE_MEMBER_CHECK(SetupInstantCountPopup, m_itemID, 0x3c0);
 
 GEODE_SIZE_CHECK(GJEffectManager, 0x7a0)
 

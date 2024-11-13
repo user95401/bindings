@@ -657,11 +657,11 @@ class cocos2d::CCProgressTimer {
 
 	void setAnchorPoint(cocos2d::CCPoint);
 	void setBarChangeRate(cocos2d::CCPoint);
-	void setPercentage(float) = ios 0x4060c4;
+	void setPercentage(float) = m1 0x5341dc, imac 0x60f500, ios 0x4060c4;
 	void setReverseDirection(bool);
 	void setReverseProgress(bool);
 	void setSprite(cocos2d::CCSprite*) = m1 0x53424c, imac 0x60f580, ios 0x406110;
-	void setType(cocos2d::CCProgressTimerType);
+	void setType(cocos2d::CCProgressTimerType) = m1 0x5343e8, imac 0x60f790;
 
 	// CCProgressTimer(cocos2d::CCProgressTimer const&);
 	// CCProgressTimer() = ios 0x405f18;
@@ -764,7 +764,7 @@ class cocos2d::CCFileUtils {
 
 [[link(win, android)]]
 class cocos2d::CCGLProgram {
-	bool initWithVertexShaderByteArray(char const*, char const*) = m1 0x3a71ac;
+	bool initWithVertexShaderByteArray(char const*, char const*) = m1 0x3a71ac, imac 0x4345d0;
 	bool initWithVertexShaderFilename(char const*, char const*);
 
 	unsigned int const getProgram();
@@ -789,18 +789,18 @@ class cocos2d::CCGLProgram {
 	void setUniformsForBuiltins() = m1 0x3a8704, imac 0x435940, ios 0x13c230;
 
 	// CCGLProgram(cocos2d::CCGLProgram const&);
-	~CCGLProgram() = m1 0x3a7194;
-	CCGLProgram() = m1 0x3a6fd8;
-	void addAttribute(char const*, unsigned int) = m1 0x3a744c;
+	~CCGLProgram() = m1 0x3a7194, imac 0x4345a0;
+	CCGLProgram() = m1 0x3a6fd8, imac 0x434400;
+	void addAttribute(char const*, unsigned int) = m1 0x3a744c, imac 0x434850;
 	bool compileShader(unsigned int*, unsigned int, char const*);
 	char const* description();
 	char const* fragmentShaderLog();
-	bool link() = m1 0x3a75e8;
+	bool link() = m1 0x3a75e8, imac 0x4349c0;
 	// char const* logForOpenGLObject(unsigned int, void (__cdecl*)(unsigned int, unsigned int, int*), void (__cdecl*)(unsigned int, int, int*, char*));
 	char const* programLog();
 	void reset() = m1 0x3a89bc, imac 0x435c70;
 	bool updateUniformLocation(int, void*, unsigned int);
-	void updateUniforms() = m1 0x3a7460;
+	void updateUniforms() = m1 0x3a7460, imac 0x434870;
 	void use() = m1 0x3a758c, imac 0x434970, ios 0x13b990;
 	char const* vertexShaderLog();
 }
@@ -1469,7 +1469,7 @@ class cocos2d::CCImage {
 	bool _saveImageToPNG(char const*, bool);
 	bool hasAlpha();
 	bool isPremultipliedAlpha();
-	bool saveToFile(char const*, bool);
+	bool saveToFile(char const*, bool) = m1 0x3f88f4, imac 0x493b50;
 }
 
 [[link(win, android)]]
@@ -2062,10 +2062,10 @@ class cocos2d::CCRenderTexture {
 	// CCRenderTexture(cocos2d::CCRenderTexture const&);
 	CCRenderTexture() = m1 0x5268fc, imac 0x5ff8b0;
 	void begin() = m1 0x5270d8, imac 0x600170;
-	void beginWithClear(float, float, float, float, float, int, unsigned int);
-	void beginWithClear(float, float, float, float);
-	void beginWithClear(float, float, float, float, float);
-	void beginWithClear(float, float, float, float, float, int);
+	void beginWithClear(float, float, float, float, float, int, unsigned int) = m1 0x527364, imac 0x600440;
+	void beginWithClear(float, float, float, float) = m1 0x5272c4, imac 0x6003a0;
+	void beginWithClear(float, float, float, float, float) = m1 0x5274ac, imac 0x6005e0;
+	void beginWithClear(float, float, float, float, float, int) = m1 0x52757c, imac 0x6006c0;
 	void clear(float, float, float, float);
 	void clearDepth(float);
 	void clearStencil(int);
@@ -2075,8 +2075,8 @@ class cocos2d::CCRenderTexture {
 	void listenToBackground(cocos2d::CCObject*);
 	void listenToForeground(cocos2d::CCObject*);
 	cocos2d::CCImage* newCCImage(bool) = m1 0x527a30, imac 0x600c30;
-	bool saveToFile(char const*);
-	bool saveToFile(char const*, cocos2d::eImageFormat);
+	bool saveToFile(char const*) = m1 0x5279e0, imac 0x600be0;
+	bool saveToFile(char const*, cocos2d::eImageFormat) = m1 0x527bd4, imac 0x600eb0;
 	void updateInternalScale(float, float);
 
 	virtual void draw() = m1 0x527814, imac 0x600980, ios 0x3c9770;
@@ -2197,6 +2197,23 @@ class cocos2d::CCCallFunc {
 [[link(win, android)]]
 class cocos2d::CCCallFuncN {
 	static cocos2d::CCCallFuncN* create(cocos2d::CCObject*, cocos2d::SEL_CallFuncN) = imac 0x7b9320, m1 0x6bf8a4;
+}
+
+[[link(win, android)]]
+class cocos2d::CCCallFuncO {
+	static cocos2d::CCCallFuncO* create(cocos2d::CCObject*, cocos2d::SEL_MenuHandler, cocos2d::CCObject*) = m1 0x6bfe6c, imac 0x7b99e0;
+
+	bool initWithTarget(cocos2d::CCObject*, cocos2d::SEL_MenuHandler, cocos2d::CCObject*);
+
+	cocos2d::CCObject* getObject();
+
+	void setObject(cocos2d::CCObject*);
+
+	// CCCallFuncO(cocos2d::CCCallFuncO const&);
+	// CCCallFuncO();
+
+	virtual cocos2d::CCObject* copyWithZone(cocos2d::CCZone*);
+	virtual void execute();
 }
 
 [[link(win, android)]]

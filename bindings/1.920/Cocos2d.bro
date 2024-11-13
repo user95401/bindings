@@ -51,6 +51,8 @@ class cocos2d::CCDirector {
 class cocos2d::CCEGLView {
 	static cocos2d::CCEGLView* sharedOpenGLView();
 
+	void toggleFullScreen(bool);
+
 	virtual void end();
 	virtual void isOpenGLReady();
 	virtual void swapBuffers();
@@ -414,6 +416,15 @@ class cocos2d::CCScheduler {
 }
 
 [[link(win, android)]]
+class cocos2d::CCSprite {
+	static cocos2d::CCSprite* create(char const*);
+	static cocos2d::CCSprite* createWithSpriteFrameName(char const*);
+
+	virtual bool initWithSpriteFrame(cocos2d::CCSpriteFrame*);
+	virtual bool initWithSpriteFrameName(char const*);
+}
+
+[[link(win, android)]]
 class cocos2d::CCSpriteFrameCache {
 	bool init();
 	void addSpriteFramesWithDictionary(cocos2d::CCDictionary*, cocos2d::CCTexture2D*);
@@ -447,6 +458,12 @@ class cocos2d::CCTouchDispatcher {
 [[link(win, android)]]
 class cocos2d::extension::CCHttpClient {
 	void send(cocos2d::extension::CCHttpRequest*);
+}
+
+[[link(win, android)]]
+class cocos2d::extension::CCControlUtils {
+	static cocos2d::extension::HSV HSVfromRGB(cocos2d::extension::RGBA);
+	static cocos2d::extension::RGBA RGBfromHSV(cocos2d::extension::HSV);
 }
 
 [[link(win, android)]]
