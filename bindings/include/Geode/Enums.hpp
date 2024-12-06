@@ -36,6 +36,7 @@ enum class SearchType {
     LevelListsOnClick = 25,
     Type26 = 26,
     Sent = 27,
+    FeaturedLite = 28,
     MyLevels = 98,
     SavedLevels = 99,
     FavouriteLevels = 100,
@@ -632,7 +633,8 @@ enum class SpecialRewardItem {
     BloodShard = 0xB,
     MetalShard = 0xC,
     LightShard = 0xD,
-    SoulShard = 0xE
+    SoulShard = 0xE,
+    GoldKey = 0xF
 };
 
 enum class EditCommand {
