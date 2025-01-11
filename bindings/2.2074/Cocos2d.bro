@@ -59,7 +59,7 @@ class cocos2d::CCEaseInOut : cocos2d::CCEaseRateAction {
 
 [[link(win, android)]]
 class cocos2d::CCEaseBackIn : cocos2d::CCActionEase {
-    static cocos2d::CCEaseBackIn* create(cocos2d::CCActionInterval*) = m1 0x46082c, imac 0x501240;
+    static cocos2d::CCEaseBackIn* create(cocos2d::CCActionInterval*) = m1 0x460c04, imac 0x501240;
 
     // CCEaseBackIn(cocos2d::CCEaseBackIn const&);
     // CCEaseBackIn();
@@ -71,7 +71,7 @@ class cocos2d::CCEaseBackIn : cocos2d::CCActionEase {
 
 [[link(win, android)]]
 class cocos2d::CCEaseBackOut : cocos2d::CCActionEase {
-    static cocos2d::CCEaseBackOut* create(cocos2d::CCActionInterval*) = m1 0x460c04, imac 0x501430;
+    static cocos2d::CCEaseBackOut* create(cocos2d::CCActionInterval*) = m1 0x460de8, imac 0x501430;
 
     // CCEaseBackOut(cocos2d::CCEaseBackOut const&);
     // CCEaseBackOut();
@@ -82,8 +82,32 @@ class cocos2d::CCEaseBackOut : cocos2d::CCActionEase {
 }
 
 [[link(win, android)]]
+class cocos2d::CCEaseBackInOut : cocos2d::CCActionEase {
+    static cocos2d::CCEaseBackInOut* create(cocos2d::CCActionInterval*) = m1 0x460fd8, imac 0x501630;
+
+    // CCEaseBackInOut(cocos2d::CCEaseBackInOut const&);
+    // CCEaseBackInOut();
+
+    virtual cocos2d::CCObject* copyWithZone(cocos2d::CCZone*) = m1 0x461080, imac 0x5016d0;
+    virtual void update(float) = m1 0x461168, imac 0x5017d0;
+    virtual cocos2d::CCActionInterval* reverse() = m1 0x4611fc, imac 0x501860;
+}
+
+[[link(win, android)]]
+class cocos2d::CCEaseBounceIn : cocos2d::CCEaseBounce {
+    static cocos2d::CCEaseBounceIn* create(cocos2d::CCActionInterval*) = m1 0x4602b4, imac 0x5009b0;
+
+    // CCEaseBounceIn(cocos2d::CCEaseBounceIn const&);
+    // CCEaseBounceIn();
+
+    virtual cocos2d::CCObject* copyWithZone(cocos2d::CCZone*) = m1 0x46035c, imac 0x500a50, ios 0x26bfe4;
+    virtual void update(float) = m1 0x460444, imac 0x500b50, ios 0x26c0ac;
+    virtual cocos2d::CCActionInterval* reverse() = m1 0x460554, imac 0x500c30, ios 0x26c0ec;
+}
+
+[[link(win, android)]]
 class cocos2d::CCEaseBounceOut : cocos2d::CCEaseBounce {
-    static cocos2d::CCEaseBounceOut* create(cocos2d::CCActionInterval*) = imac 0x500c50;
+    static cocos2d::CCEaseBounceOut* create(cocos2d::CCActionInterval*) = imac 0x500c50, m1 0x460574;
 
     // CCEaseBounceOut(cocos2d::CCEaseBounceOut const&);
     // CCEaseBounceOut();
@@ -91,6 +115,18 @@ class cocos2d::CCEaseBounceOut : cocos2d::CCEaseBounce {
     virtual cocos2d::CCObject* copyWithZone(cocos2d::CCZone*) = m1 0x46061c, imac 0x500cf0, ios 0x26c19c;
     virtual void update(float) = imac 0x500df0, m1 0x460704, ios 0x26c264;
     virtual cocos2d::CCActionInterval* reverse() = imac 0x500eb0, m1 0x46080c, ios 0x26c290;
+}
+
+[[link(win, android)]]
+class cocos2d::CCEaseBounceInOut : cocos2d::CCEaseBounce {
+    static cocos2d::CCEaseBounceInOut* create(cocos2d::CCActionInterval*) = m1 0x46082c, imac 0x500ed0;
+
+    // CCEaseBounceInOut(cocos2d::CCEaseBounceInOut const&);
+    // CCEaseBounceInOut();
+
+    virtual cocos2d::CCObject* copyWithZone(cocos2d::CCZone*) = m1 0x4608d4, imac 0x500f70;
+    virtual void update(float) = m1 0x4609bc, imac 0x501070;
+    virtual cocos2d::CCActionInterval* reverse() = m1 0x460be4, imac 0x501220;
 }
 
 [[link(win, android)]]
@@ -117,6 +153,19 @@ class cocos2d::CCEaseElasticOut : cocos2d::CCEaseElastic {
     virtual cocos2d::CCObject* copyWithZone(cocos2d::CCZone*) = m1 0x45fb54, imac 0x500210, ios 0x26bd04;
     virtual void update(float) = imac 0x500320, m1 0x45fc4c, ios 0x26bde0;
     virtual cocos2d::CCActionInterval* reverse() = imac 0x5003c0, m1 0x45fce4, ios 0x26be74;
+}
+
+[[link(win, android)]]
+class cocos2d::CCEaseElasticInOut : cocos2d::CCEaseElastic {
+	static cocos2d::CCEaseElasticInOut* create(cocos2d::CCActionInterval*) = m1 0x45fd14, imac 0x5003f0;
+	static cocos2d::CCEaseElasticInOut* create(cocos2d::CCActionInterval*, float) = m1 0x45fd24, imac 0x500410;
+
+	// CCEaseElasticInOut(cocos2d::CCEaseElasticInOut const&);
+	// CCEaseElasticInOut();
+
+	virtual cocos2d::CCObject* copyWithZone(cocos2d::CCZone*) = m1 0x45fde0, imac 0x5004d0;
+	virtual void update(float) = m1 0x45fed8, imac 0x5005e0;
+	virtual cocos2d::CCActionInterval* reverse() = m1 0x45ffec, imac 0x500700;
 }
 
 [[link(win, android)]]
@@ -196,7 +245,7 @@ class cocos2d::CCMotionStreak : cocos2d::CCNodeRGBA, cocos2d::CCTextureProtocol 
     static cocos2d::CCMotionStreak* create(float, float, float, cocos2d::_ccColor3B const&, cocos2d::CCTexture2D*) = imac 0x55f3e0;
     static cocos2d::CCMotionStreak* create(float, float, float, cocos2d::_ccColor3B const&, char const*) = imac 0x55f3e0;
 
-    bool initWithFade(float, float, float, cocos2d::_ccColor3B const&, cocos2d::CCTexture2D*) = imac 0x55f530, m1 0x4b5ffc;
+    bool initWithFade(float, float, float, cocos2d::_ccColor3B const&, cocos2d::CCTexture2D*) = imac 0x55f6e0, m1 0x4b6180;
     bool initWithFade(float, float, float, cocos2d::_ccColor3B const&, char const*) = imac 0x55f530, m1 0x4b5ffc;
 
     bool getDontOpacityFade() const;
@@ -309,7 +358,7 @@ class cocos2d::CCRemoveSelf : cocos2d::CCActionInstant {
 [[link(win, android)]]
 class cocos2d::CCScaleBy : cocos2d::CCScaleTo {
     static cocos2d::CCScaleBy* create(float, float) = imac 0x3a7430, m1 0x3339d0;
-    static cocos2d::CCScaleBy* create(float, float, float);
+    static cocos2d::CCScaleBy* create(float, float, float) = m1 0x333a68, imac 0x3a74f0;
 
     // CCScaleBy(cocos2d::CCScaleBy const&);
     // CCScaleBy();
@@ -333,6 +382,31 @@ class cocos2d::CCScaleTo : cocos2d::CCActionInterval {
     virtual cocos2d::CCObject* copyWithZone(cocos2d::CCZone*) = m1 0x3337fc, imac 0x3a7250, ios 0x18fb38;
     virtual void update(float) = imac 0x3a73d0, m1 0x333960, ios 0x18fc90;
     virtual void startWithTarget(cocos2d::CCNode*) = m1 0x3338f4, imac 0x3a7360, ios 0x18fc24;
+}
+
+[[link(win, android)]]
+class cocos2d::CCSkewBy : cocos2d::CCSkewTo {
+    static cocos2d::CCSkewBy* create(float, float, float) = m1 0x33249c, imac 0x3a5bd0;
+
+    // CCSkewBy(cocos2d::CCSkewBy const&);
+    // CCSkewBy();
+
+    virtual void startWithTarget(cocos2d::CCNode*) = m1 0x33257c, imac 0x3a5d00;
+    virtual cocos2d::CCActionInterval* reverse() = m1 0x332658, imac 0x3a5e10;
+    virtual bool initWithDuration(float, float, float) = m1 0x332550, imac 0x3a5cb0;
+}
+
+[[link(win, android)]]
+class cocos2d::CCSkewTo : cocos2d::CCActionInterval {
+    static cocos2d::CCSkewTo* create(float, float, float) = m1 0x332154, imac 0x3a57d0;
+
+    // CCSkewTo(cocos2d::CCSkewTo const&);
+    // CCSkewTo();
+
+    virtual cocos2d::CCObject* copyWithZone(cocos2d::CCZone*) = m1 0x332248, imac 0x3a5900;
+    virtual void update(float) = m1 0x332410, imac 0x3a5b30;
+    virtual void startWithTarget(cocos2d::CCNode*) = m1 0x332328, imac 0x3a59e0;
+    virtual bool initWithDuration(float, float, float) = m1 0x332220, imac 0x3a58c0;
 }
 
 [[link(win, android)]]
@@ -374,6 +448,47 @@ class cocos2d::CCAction : cocos2d::CCObject {
     virtual void startWithTarget(cocos2d::CCNode*) = imac 0x5dcbf0, m1 0x50fb48, ios 0x264928;
     virtual void stop() = m1 0x50fb50, imac 0x5dcc00, ios 0x264930;
     virtual void step(float) = m1 0x50fb60, imac 0x5dcc20, ios 0x264940;
+}
+
+[[link(win, android)]]
+class cocos2d::CCFiniteTimeAction : cocos2d::CCAction {
+    // CCFiniteTimeAction(cocos2d::CCFiniteTimeAction const&);
+    // CCFiniteTimeAction();
+
+    virtual cocos2d::CCFiniteTimeAction* reverse() = m1 0x50fb68, imac 0x5dcc40;
+}
+
+[[link(win, android)]]
+class cocos2d::CCActionInstant : cocos2d::CCFiniteTimeAction {
+    // CCActionInstant(cocos2d::CCActionInstant const&);
+    CCActionInstant() = m1 0x6a9794, imac 0x796640;
+
+    virtual cocos2d::CCObject* copyWithZone(cocos2d::CCZone*) = m1 0x6a97dc, imac 0x7966a0, ios 0x1b0e04;
+    virtual void update(float) = m1 0x6a98b8, imac 0x796780, ios 0x1b0ec4;
+    virtual bool isDone() = m1 0x6a98a0, imac 0x796750, ios 0x1b0eac;
+    virtual void step(float) = m1 0x6a98a8, imac 0x796760, ios 0x1b0eb4;
+    virtual cocos2d::CCFiniteTimeAction* reverse() = m1 0x6a98bc, imac 0x796790, ios 0x1b0ec8;
+}
+
+[[link(win, android)]]
+class cocos2d::CCActionInterval : cocos2d::CCFiniteTimeAction {
+    static cocos2d::CCActionInterval* create(float);
+
+    bool initWithDuration(float) = m1 0x32f224, imac 0x3a22c0;
+
+    float getAmplitudeRate();
+    bool getM_bFirstTick() const;
+
+    void setAmplitudeRate(float);
+
+    // CCActionInterval(cocos2d::CCActionInterval const&);
+    // CCActionInterval();
+
+    virtual cocos2d::CCObject* copyWithZone(cocos2d::CCZone*) = m1 0x32f248, imac 0x3a2300, ios 0x18d818;
+    virtual bool isDone() = m1 0x32f32c, imac 0x3a2400, ios 0x18d8f0;
+    virtual void startWithTarget(cocos2d::CCNode*) = m1 0x32f3b0, imac 0x3a24a0, ios 0x18d968;
+    virtual void step(float) = m1 0x32f33c, imac 0x3a2420, ios 0x18d900;
+    virtual cocos2d::CCActionInterval* reverse() = m1 0x32f3dc, imac 0x3a24c0, ios 0x18d994;
 }
 
 [[link(win, android)]]
@@ -497,7 +612,7 @@ class cocos2d::CCParticleSystem : cocos2d::CCNode, cocos2d::CCTextureProtocol {
     void loadDefaults();
     void loadScaledDefaults(float) = imac 0x7b60e0;
     void resetSystem() = imac 0x7b4740, m1 0x6c5358;
-    void resumeSystem();
+    void resumeSystem() = imac 0x7b4730, m1 0x6c534c;
     void saveDefaults();
     void stopSystem() = imac 0x7b4700, m1 0x6c5338;
     void toggleUniformColorMode(bool);
@@ -615,8 +730,8 @@ class cocos2d::CCParticleFire : cocos2d::CCParticleSystemQuad {
 	// CCParticleFire(cocos2d::CCParticleFire const&);
 	// CCParticleFire();
 
-	// virtual bool init();
-	// virtual bool initWithTotalParticles(unsigned int);
+	// virtual bool init() = m1 0x3e2e48, imac 0x474210;
+	// virtual bool initWithTotalParticles(unsigned int) = m1 0x3e0e58, imac 0x472360;
 }
 
 [[link(win, android)]]
@@ -627,8 +742,8 @@ class cocos2d::CCParticleRain : cocos2d::CCParticleSystemQuad {
 	// CCParticleRain(cocos2d::CCParticleRain const&);
 	// CCParticleRain();
 
-	// virtual bool init();
-	// virtual bool initWithTotalParticles(unsigned int);
+	// virtual bool init() = m1 0x3e2eb8, imac 0x4742f0;
+	// virtual bool initWithTotalParticles(unsigned int) = m1 0x3e2c3c, imac 0x474000;
 }
 
 [[link(win, android)]]
@@ -877,7 +992,7 @@ class cocos2d::CCNode : cocos2d::CCObject {
     cocos2d::CCAction* runAction(cocos2d::CCAction*) = imac 0x261f80, m1 0x20dd34;
     void schedule(cocos2d::SEL_SCHEDULE) = imac 0x2621b0, m1 0x20dee8;
     void schedule(cocos2d::SEL_SCHEDULE, float) = imac 0x262210, m1 0x20df28;
-    void schedule(cocos2d::SEL_SCHEDULE, float, unsigned int, float) = imac 0x2621e0;
+    void schedule(cocos2d::SEL_SCHEDULE, float, unsigned int, float) = imac 0x2621e0, m1 0x20df0c;
     void scheduleOnce(cocos2d::SEL_SCHEDULE, float) = imac 0x262240, m1 0x20df48;
     void scheduleUpdate() = imac 0x262090, m1 0x20ddf0;
     void scheduleUpdateWithPriority(int) = imac 0x2620c0;
@@ -890,7 +1005,7 @@ class cocos2d::CCNode : cocos2d::CCObject {
     void transform();
     void transformAncestors();
     void unschedule(cocos2d::SEL_SCHEDULE) = imac 0x262270, m1 0x20df6c;
-    void unscheduleAllSelectors() = imac 0x260e50;
+    void unscheduleAllSelectors() = imac 0x260e50, m1 0x20cbf8;
     void unscheduleUpdate() = imac 0x262160, m1 0x20de9c;
     void updateChildIndexes();
 
@@ -1047,7 +1162,7 @@ class cocos2d::CCLayer : cocos2d::CCNode, cocos2d::CCTouchDelegate, cocos2d::CCA
     void registerScriptAccelerateHandler(int);
     void registerScriptKeypadHandler(int);
     void unregisterScriptAccelerateHandler();
-    void unregisterScriptKeypadHandler();
+    void unregisterScriptKeypadHandler() = m1 0x408234, imac 0x49d240;
 
     virtual bool init() = imac 0x49d510, m1 0x40841c, ios 0x14bcc0;
     virtual void onEnter() = imac 0x49de10, m1 0x408cf4, ios 0x14c3ac;
@@ -1332,7 +1447,7 @@ class cocos2d::CCTextureCache : cocos2d::CCObject {
     bool reloadTexture(char const*);
     void removeAllTextures();
     void removeTexture(cocos2d::CCTexture2D*);
-    void removeTextureForKey(char const*) = imac 0x5d6ca0;
+    void removeTextureForKey(char const*) = imac 0x5d6ca0, m1 0x50a7e4;
     void removeUnusedTextures();
     cocos2d::CCDictionary* snapshotTextures();
     cocos2d::CCTexture2D* textureForKey(char const*) = imac 0x5d6d20, m1 0x50a874;
@@ -1743,12 +1858,12 @@ class cocos2d::CCSequence : cocos2d::CCActionInterval {
 [[link(win, android)]]
 class cocos2d::CCSprite : cocos2d::CCNodeRGBA, cocos2d::CCTextureProtocol {
     static cocos2d::CCSprite* create(char const*) = imac 0x276440, m1 0x2210dc;
-    static cocos2d::CCSprite* create(char const*, cocos2d::CCRect const&) = imac 0x276530, m1 0x50a7e4;
+    static cocos2d::CCSprite* create(char const*, cocos2d::CCRect const&) = imac 0x276530, m1 0x2211cc;
     static cocos2d::CCSprite* create() = imac 0x276760, m1 0x2213ec;
     static cocos2d::CCSprite* createWithSpriteFrame(cocos2d::CCSpriteFrame*) = imac 0x276630, m1 0x2212d0;
     static cocos2d::CCSprite* createWithSpriteFrameName(char const*) = m1 0x2213c4, imac 0x276730;
     static cocos2d::CCSprite* createWithTexture(cocos2d::CCTexture2D*) = imac 0x2761b0, m1 0x220e60;
-    static cocos2d::CCSprite* createWithTexture(cocos2d::CCTexture2D*, cocos2d::CCRect const&) = imac 0x276340;
+    static cocos2d::CCSprite* createWithTexture(cocos2d::CCTexture2D*, cocos2d::CCRect const&) = imac 0x276340, m1 0x220fd8;
 
     unsigned int getAtlasIndex();
     float getBlVertexMod() const;
@@ -2865,6 +2980,7 @@ class cocos2d::CCDrawNode : cocos2d::CCNodeRGBA {
 [[link(win, android)]]
 class cocos2d::CCSpriteBatchNode : cocos2d::CCNode, cocos2d::CCTextureProtocol {
     static cocos2d::CCSpriteBatchNode* createWithTexture(cocos2d::CCTexture2D*, unsigned int) = m1 0x132d50, imac 0x165920;
+    static cocos2d::CCSpriteBatchNode* create(char const* fileImage, unsigned int capacity) = m1 0x132f40, imac 0x165b50;
 
     bool initWithTexture(cocos2d::CCTexture2D*, unsigned int) = imac 0x165a10, m1 0x132e04;
 
@@ -2949,7 +3065,7 @@ class cocos2d::CCSpriteFrameCache : cocos2d::CCObject {
     void addSpriteFramesWithFile(char const*, char const*);
     void addSpriteFramesWithFile(char const*) = imac 0x308940, m1 0x29f998;
     void addSpriteFramesWithFile(char const*, cocos2d::CCTexture2D*);
-    void removeSpriteFrameByName(char const*);
+    void removeSpriteFrameByName(char const*) = m1 0x2a0020, imac 0x308e80;
     void removeSpriteFrames();
     void removeSpriteFramesFromDictionary(cocos2d::CCDictionary*);
     void removeSpriteFramesFromFile(char const*);
@@ -2988,7 +3104,7 @@ class cocos2d::CCMenuItem : cocos2d::CCNodeRGBA {
 
     // CCMenuItem(cocos2d::CCMenuItem const&);
     // CCMenuItem();
-    cocos2d::CCRect rect();
+    cocos2d::CCRect rect() = m1 0x337934, imac 0x3abb30;
 
     virtual void activate() = imac 0x3abaa0, m1 0x3378a8, ios 0x506b4;
     virtual void selected() = m1 0x337824, imac 0x3aba10, ios 0x50630;
@@ -3020,11 +3136,11 @@ class cocos2d::CCMenuItemSprite : cocos2d::CCMenuItem {
 class cocos2d::CCMenu : cocos2d::CCLayerRGBA {
     // static cocos2d::CCMenu* create(cocos2d::CCMenuItem*, ...) = ios 0x1e1964, m1 0x6a6d58, imac 0x79e7b0;
     static cocos2d::CCMenu* create() = imac 0x77c950, m1 0x691950;
-    static cocos2d::CCMenu* createWithArray(cocos2d::CCArray*) = imac 0x77cb50;
+    static cocos2d::CCMenu* createWithArray(cocos2d::CCArray*) = imac 0x77cb50, m1 0x691aa8;
     static cocos2d::CCMenu* createWithItem(cocos2d::CCMenuItem*) = m1 0x691cf4, imac 0x77cda0;
     // static cocos2d::CCMenu* createWithItems(cocos2d::CCMenuItem*, char*);
 
-    bool initWithArray(cocos2d::CCArray*);
+    bool initWithArray(cocos2d::CCArray*) = m1 0x691b60, imac 0x77cc20;
 
     void setHandlerPriority(int);
 
@@ -3060,7 +3176,7 @@ class cocos2d::CCMenu : cocos2d::CCLayerRGBA {
 [[link(win, android)]]
 class cocos2d::CCRotateBy : cocos2d::CCActionInterval {
     static cocos2d::CCRotateBy* create(float, float) = imac 0x3a4bb0, m1 0x33167c;
-    static cocos2d::CCRotateBy* create(float, float, float);
+    static cocos2d::CCRotateBy* create(float, float, float) = m1 0x331744, imac 0x3a4cb0;
 
     bool initWithDuration(float, float);
     bool initWithDuration(float, float, float);
@@ -3077,7 +3193,7 @@ class cocos2d::CCRotateBy : cocos2d::CCActionInterval {
 [[link(win, android)]]
 class cocos2d::CCRotateTo : cocos2d::CCActionInterval {
     static cocos2d::CCRotateTo* create(float, float) = imac 0x3a46d0, m1 0x331280;
-    static cocos2d::CCRotateTo* create(float, float, float);
+    static cocos2d::CCRotateTo* create(float, float, float) = m1 0x33134c, imac 0x3a47d0;
 
     bool initWithDuration(float, float);
     bool initWithDuration(float, float, float);
@@ -3100,6 +3216,51 @@ class cocos2d::CCDelayTime : cocos2d::CCActionInterval {
     virtual cocos2d::CCObject* copyWithZone(cocos2d::CCZone*) = imac 0x3a8b50, m1 0x334e94, ios 0x190824;
     virtual void update(float) = m1 0x334f68, imac 0x3a8c20, ios 0x1908dc;
     virtual cocos2d::CCActionInterval* reverse() = m1 0x334f6c, imac 0x3a8c30, ios 0x1908e0;
+}
+
+[[link(win, android)]]
+class cocos2d::CCLabelTTF : cocos2d::CCSprite, cocos2d::CCLabelProtocol {
+	static cocos2d::CCLabelTTF* create(char const*, char const*, float) = m1 0x336634, imac 0x3aa5f0;
+	static cocos2d::CCLabelTTF* create(char const*, char const*, float, cocos2d::CCSize const&, cocos2d::CCTextAlignment) = m1 0x336790, imac 0x3aa770;
+	static cocos2d::CCLabelTTF* create(char const*, char const*, float, cocos2d::CCSize const&, cocos2d::CCTextAlignment, cocos2d::CCVerticalTextAlignment) = m1 0x336648, imac 0x3aa610;
+	static cocos2d::CCLabelTTF* create() = m1 0x336520, imac 0x3aa4d0;
+	static cocos2d::CCLabelTTF* createWithFontDefinition(char const*, cocos2d::_ccFontDefinition&) = m1 0x336904, imac 0x3aa900;
+
+	bool initWithString(char const*, char const*, float) = m1 0x336b18, imac 0x3aab10;
+	bool initWithString(char const*, char const*, float, cocos2d::CCSize const&, cocos2d::CCTextAlignment) = m1 0x336b2c, imac 0x3aab30;
+	bool initWithString(char const*, char const*, float, cocos2d::CCSize const&, cocos2d::CCTextAlignment, cocos2d::CCVerticalTextAlignment) = m1 0x336798, imac 0x3aa780;
+	bool initWithStringAndTextDefinition(char const*, cocos2d::_ccFontDefinition&) = m1 0x336a6c, imac 0x3aaa70;
+
+	cocos2d::CCSize getDimensions();
+	char const* getFontName() = m1 0x336f98, imac 0x3ab060;
+	float getFontSize();
+	cocos2d::CCTextAlignment getHorizontalAlignment();
+	cocos2d::_ccFontDefinition* getTextDefinition() = m1 0x337110, imac 0x3ab240;
+	cocos2d::CCVerticalTextAlignment getVerticalAlignment();
+
+	void setDimensions(cocos2d::CCSize const&);
+	void setFontFillColor(cocos2d::_ccColor3B const&, bool);
+	void setFontName(char const*) = m1 0x336fb0, imac 0x3ab080;
+	void setFontSize(float);
+	void setHorizontalAlignment(cocos2d::CCTextAlignment);
+	void setTextDefinition(cocos2d::_ccFontDefinition*) = m1 0x337100, imac 0x3ab220;
+	void setVerticalAlignment(cocos2d::CCVerticalTextAlignment);
+
+	// CCLabelTTF(cocos2d::CCLabelTTF const&);
+	// CCLabelTTF();
+	cocos2d::_ccFontDefinition _prepareTextDefinition(bool) = m1 0x337280, imac 0x3ab390;
+	void _updateWithTextDefinition(cocos2d::_ccFontDefinition&, bool) = m1 0x336b34, imac 0x3aab40;
+	char const* description() = m1 0x336e34, imac 0x3aae90;
+	void disableShadow(bool);
+	void disableStroke(bool);
+	void enableShadow(cocos2d::CCSize const&, float, float, bool);
+	void enableStroke(cocos2d::_ccColor3B const&, float, bool);
+	bool updateTexture() = m1 0x336c44, imac 0x3aac60;
+
+	virtual bool init() = m1 0x336af0, imac 0x3aaae0, ios 0x72800;
+
+	virtual void setString(char const*) = m1 0x336bec, imac 0x3aac10, ios 0x7283c;
+	virtual char const* getString() = m1 0x336dfc, imac 0x3aae40, ios 0x729a4;
 }
 
 [[link(win, android)]]
@@ -3189,7 +3350,7 @@ class cocos2d {
     	ccDrawSolidPoly(vertices, 4, color);
     }
     static void ccGLBindTexture2D(unsigned int) = m1 0x2dcb6c, imac 0x347f80;
-    static void ccGLBindTexture2DN(unsigned int, unsigned int);
+    static void ccGLBindTexture2DN(unsigned int, unsigned int) = m1 0x2dcbb8, imac 0x347fc0;
     static void ccGLBindVAO(unsigned int);
     static void ccGLBlendFunc(unsigned int, unsigned int) = imac 0x347ed0, m1 0x2dcaa4;
     static void ccGLBlendResetToCache();
@@ -3411,8 +3572,19 @@ class cocos2d::ZipUtils {
 
 [[link(win, android)]]
 class cocos2d::CCSpawn : cocos2d::CCActionInterval {
-    static cocos2d::CCSpawn* create(cocos2d::CCArray*);
+    static cocos2d::CCSpawn* create(cocos2d::CCArray*) = m1 0x3309f8, imac 0x3a3db0;
     // static cocos2d::CCSpawn* create(cocos2d::CCFiniteTimeAction*, ...) = m1 0x33e430, imac 0x3b9e30;
+    static cocos2d::CCSpawn* create(cocos2d::CCFiniteTimeAction* first, ...) = mac inline {
+        va_list args;
+        va_start(args, first);
+        auto* array = cocos2d::CCArray::create();
+        array->addObject(first);
+        while (auto* action = va_arg(args, cocos2d::CCFiniteTimeAction*)) {
+            array->addObject(action);
+        }
+        va_end(args);
+        return cocos2d::CCSpawn::create(array);
+    }
     static cocos2d::CCSpawn* createWithTwoActions(cocos2d::CCFiniteTimeAction*, cocos2d::CCFiniteTimeAction*) = m1 0x33096c, imac 0x3a3d20;
     // static cocos2d::CCSpawn* createWithVariableList(cocos2d::CCFiniteTimeAction*, char*);
 
@@ -3563,4 +3735,17 @@ class cocos2d::CCConfiguration {
 	bool supportsNPOT() const;
 	bool supportsPVRTC() const;
 	bool supportsShareableVAO() const;
+}
+
+[[link(win, android)]]
+class cocos2d::CCPoolManager {
+	// CCPoolManager();
+	void addObject(cocos2d::CCObject*);
+	void finalize();
+	cocos2d::CCAutoreleasePool* getCurReleasePool();
+	void pop() = m1 0x367288, imac 0x3e4f70;
+	static void purgePoolManager();
+	void push();
+	void removeObject(cocos2d::CCObject*);
+	static cocos2d::CCPoolManager* sharedPoolManager();
 }

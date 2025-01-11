@@ -37,6 +37,7 @@ enum class SearchType {
     Type26 = 26,
     Sent = 27,
     FeaturedLite = 28,
+    Bonus = 29,
     MyLevels = 98,
     SavedLevels = 99,
     FavouriteLevels = 100,
@@ -362,7 +363,6 @@ enum class GJAreaActionType {};
 enum class GJSmartDirection {};
 enum class SmartBlockType {};
 enum class TouchTriggerControl {};
-enum class SmartPrefabResult {};
 enum class AudioSortType {
     NameAscending = 0,
     NameDescending = 1,
@@ -488,7 +488,11 @@ enum class AudioGuidelinesType {
     BPMFinder = 1
 };
 enum class SmartBrowseFilter {};
-enum class GJUITouchEvent {};
+enum class GJUITouchEvent {
+    Pressed = 0,
+    Moved = 1,
+    Ended = 2
+};
 enum class ObjectScaleType {
     XY = 0,
     X = 1,
